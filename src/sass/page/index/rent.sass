@@ -1,0 +1,25 @@
+section.rent
+  display: flex
+  flex-direction: column
+  .top-block
+    display: flex
+    justify-content: space-between
+    align-items: center
+    a
+      font-weight: 500
+      font-size: 18px
+      line-height: 21px
+      text-decoration: underline
+      color: $black
+      padding-right: 30px
+      position: relative
+      &:after
+        content: ''
+        position: absolute
+        top: 0
+        right: 0
+        bottom: 0
+        margin: auto
+        width: 22px
+        height: 12px
+        background: url("../img/svg/arrow_right.svg") center center / 100% 100% no-repeat

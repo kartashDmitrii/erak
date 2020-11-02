@@ -1,0 +1,105 @@
+header
+  background: $header-color
+  padding: 16px
+  .container
+    display: flex
+    align-items: center
+    justify-content: space-between
+    .logo
+      width: 120px
+      height: 64px
+      margin-right: 210px
+    .mobile
+      display: flex
+      align-items: center
+      justify-content: space-between
+      flex: 1
+      nav
+        flex: 1
+        ul
+          padding: 0
+          margin: 0
+          list-style: none
+          display: flex
+          align-items: center
+          li
+            display: flex
+            margin-right: 44px
+            position: relative
+            &:last-child
+              margin-right: 0
+            &.active
+              &:after
+                content: ''
+                position: absolute
+                top: calc(100% - 7px)
+                left: 5px
+                width: calc(100% - 10px)
+                height: 7px
+                background-image: linear-gradient(to top right, $main 45%, transparent 55%)
+                border-radius: 1px
+            a
+              text-decoration: none
+              color: $white
+              font-size: 22px
+              line-height: 26px
+              padding: 5px
+      .lang
+        margin-right: 120px
+        ul
+          padding: 0
+          margin: 0
+          list-style: none
+          display: flex
+          align-items: center
+          li
+            display: flex
+            &:first-child
+              a:before
+                padding-left: 0
+                content: none
+            &.active
+              a
+                color: $white
+            a
+              text-transform: uppercase
+              text-decoration: none
+              color: #87827C
+              font-weight: 300
+              font-size: 20px
+              line-height: 24px
+              padding-left: 3px
+              &:before
+                content: '|'
+                padding-right: 3px
+
+    .user-menu
+      display: flex
+      flex-direction: column
+      .phone
+        position: relative
+        padding-left: 34px
+        text-decoration: none
+        color: $white
+        font-size: 20px
+        line-height: 24px
+        margin-bottom: 7px
+        &:before
+          content: ''
+          position: absolute
+          top: 0
+          left: 0
+          bottom: 0
+          margin: auto
+          width: 24px
+          height: 24px
+          background: url("../img/svg/phone.svg") center center / 100% 100% no-repeat
+      p
+        font-size: 16px
+        line-height: 19px
+        color: $white
+        text-decoration: underline
+        cursor: pointer
+        margin: 0
+        &:hover
+          text-decoration: none
