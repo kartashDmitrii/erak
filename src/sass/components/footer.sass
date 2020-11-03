@@ -1,0 +1,78 @@
+footer
+  background: $footer-bg
+  padding: 43px 0 24px
+  color: $white
+  .container
+    display: flex
+    flex-direction: column
+    .top
+      display: flex
+      justify-content: flex-start
+      align-items: center
+      margin-bottom: 35px
+      .address
+        font-size: 22px
+        line-height: 26px
+        max-width: 240px
+        margin: 0 90px 0 0
+        @media (max-width: 860px)
+          margin-right: 60px
+      .phones
+        padding: 0
+        margin: 0 130px 0 0
+        list-style: none
+        display: flex
+        flex-direction: column
+        @media (max-width: 860px)
+          margin-right: 80px
+        li
+          margin-bottom: 5px
+          font-size: 22px
+          line-height: 26px
+          &:last-child
+            margin-bottom: 0
+          a
+            color: inherit
+            text-decoration: inherit
+      .links
+        padding: 0
+        margin: 0
+        list-style: none
+        display: flex
+        flex-direction: column
+        li
+          margin-bottom: 5px
+          font-size: 22px
+          line-height: 26px
+          text-decoration: underline
+          &:hover
+            text-decoration: none
+          &:last-child
+            margin-bottom: 0
+          a
+            color: inherit
+            text-decoration: inherit
+    .bottom
+      display: flex
+      justify-content: flex-start
+      align-items: center
+      .rights
+        font-size: 22px
+        line-height: 26px
+        margin: 0 265px 0 0
+        @media (max-width: 860px)
+          margin-right: 160px
+      .dev
+        display: flex
+        font-size: 20px
+        line-height: 170%
+        text-transform: capitalize
+        p
+          margin: 0
+        a
+          margin-left: 10px
+          margin-right: 10px
+          max-height: 20px
+          width: auto
+          &:last-child
+            margin-right: 0

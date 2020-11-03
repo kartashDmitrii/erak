@@ -1,0 +1,114 @@
+section.form
+  margin-top: 107px
+  background: #494444
+  .container
+    display: flex
+    justify-content: space-between
+    @media (max-width: 860px)
+      flex-direction: column
+    .text
+      margin-top: 66px
+      width: calc(100% - 760px)
+      margin-right: 130px
+      @media (max-width: 1365px)
+        width: calc(100% - 660px)
+        margin-right: 50px
+      @media (max-width: 860px)
+        display: flex
+        flex-direction: column
+        align-items: center
+        width: 100%
+      .section-title
+        font-weight: 500
+        color: #ffffff
+        margin-bottom: 62px
+      p
+        font-weight: 700
+        font-size: 153px
+        line-height: 181px
+        margin: 0 0 0 -105px
+        color: rgba(255,255,255,.1)
+        @media (max-width: 1365px)
+          font-size: 121px
+          line-height: 146px
+        @media (max-width: 1023px)
+          margin-left: 0
+          font-size: 91px
+          line-height: 105px
+    .form
+      margin-top: -75px
+      margin-bottom: -20px
+      background: #3D3D3D
+      width: 610px
+      min-height: 530px
+      padding: 85px 85px 60px
+      box-sizing: border-box
+      position: relative
+      display: flex
+      flex-direction: column
+      @media (max-width: 1365px)
+        width: 500px
+        padding: 60px 35px 40px
+      @media (max-width: 1199px)
+        width: 400px
+      @media (max-width: 860px)
+        max-width: 610px
+        width: 100%
+        margin: 0 auto
+      &:before
+        content: ''
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 20px
+        background: linear-gradient(to bottom left, $main 50%, transparent 51%)
+      form
+        width: 100%
+        display: flex
+        flex-direction: column
+        margin-bottom: 24px
+        label
+          width: 100%
+          display: flex
+          input
+            width: 100%
+            background: #4C4A48
+            border: 1px solid $white
+            box-sizing: border-box
+            border-radius: 5px
+            margin-bottom: 37px
+            padding: 15px 20px
+            font-size: 22px
+            line-height: 26px
+            color: #ffffff
+            @media (max-width: 1365px)
+              padding: 15px
+            &::placeholder
+              color: #acacac
+        input[type="submit"]
+          background: #FFB902
+          border-radius: 5px
+          display: flex
+          align-items: center
+          justify-content: center
+          font-weight: 500
+          font-size: 22px
+          line-height: 26px
+          padding: 22px
+          cursor: pointer
+          border: none
+          outline: none
+          color: $black
+          margin-bottom: 24px
+      a
+        width: 100%
+        padding: 20px
+        box-sizing: border-box
+        border: 1px solid #FFB902
+        border-radius: 5px
+        font-size: 18px
+        line-height: 21px
+        color: #ffffff
+        text-decoration: none
+        text-align: center

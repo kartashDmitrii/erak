@@ -2,6 +2,8 @@ section.production
   display: flex
   flex-direction: column
   margin-bottom: 180px
+  @media (max-width: 1023px)
+    margin-bottom: 90px
   .section-title
     margin-bottom: 60px
   .category-grid
@@ -10,5 +12,10 @@ section.production
     grid-auto-rows: 1fr
     grid-column-gap: 175px
     grid-row-gap: 70px
+    @media (max-width: 1365px)
+      grid-column-gap: 75px
+    @media (max-width: 960px)
+      grid-template-columns: repeat(2,1fr)
+      margin: 0 40px
     .elem
       position: relative
