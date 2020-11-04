@@ -2,11 +2,15 @@ section.rent
   display: flex
   flex-direction: column
   margin-bottom: 40px
+  @media (max-width: 480px)
+    margin-bottom: 8px
   .top-block
     display: flex
     justify-content: space-between
     align-items: center
     margin-bottom: 40px
+    @media (max-width: 480px)
+      margin-bottom: 20px
     a
       font-weight: 500
       font-size: 18px
@@ -36,6 +40,8 @@ section.rent
     justify-content: center
     @media (max-width: 1365px)
       margin: 0 -10px
+    @media (max-width: 576px)
+      margin: 0 -5px
     li
       width: calc((100% / 6) - 40px)
       margin: 0 20px 20px
@@ -56,6 +62,15 @@ section.rent
         width: calc((100% / 5) - 20px)
       @media (max-width: 850px)
         width: calc((100% / 4) - 20px)
+      @media (max-width: 767px)
+        width: calc((100% / 3) - 20px)
+      @media (max-width: 576px)
+        width: calc((100% / 3) - 10px)
+        margin: 0 5px 5px
+      @media (max-width: 480px)
+        font-size: 10px
+        line-height: 12px
+        width: calc((100% / 2) - 10px)
       &.active
         background: $main
         border: none
@@ -76,6 +91,8 @@ section.rent
       display: grid
       grid-template-columns: repeat(4, 1fr)
       margin: 0 -10px 55px
+      @media (max-width: 480px)
+        margin-bottom: 20px
       .slide
         margin: 0 10px
         padding-bottom: 10px
@@ -91,6 +108,8 @@ section.rent
           cursor: pointer
           background: url("../img/svg/slider_arrow.svg") center center / 100% 100% no-repeat
           transition: all .3s
+          @media (max-width: 767px)
+            display: none
           &:active
             top: 15px
         .next
@@ -106,6 +125,8 @@ section.rent
         display: flex
         justify-content: center
         align-items: center
+        @media (max-width: 576px)
+          flex-wrap: wrap
         .dot
           width: 18px
           height: 18px
@@ -120,3 +141,9 @@ section.rent
             background-color: $main
           &:last-child
             margin-right: 0
+          @media (max-width: 576px)
+            width: 12px
+            padding: 0
+            height: 12px
+            margin-right: 12px
+            margin-bottom: 12px

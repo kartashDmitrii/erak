@@ -25,6 +25,8 @@ section.about-us
       column-count: 2
       column-gap: 20px
       margin-bottom: 85px
+      @media (max-width: 767px)
+        column-count: 1
       p
         margin: 0 0 5px
         font-weight: 300
@@ -39,6 +41,8 @@ section.about-us
       justify-content: center
       @media (max-width: 950px)
         height: 450px
+      @media (max-width: 576px)
+        height: auto
       &:before
         content: ''
         width: calc(100% - 400px)
@@ -47,15 +51,26 @@ section.about-us
         bottom: 50px
         left: 200px
         border-bottom: 3px dashed #FFB902
+        @media (max-width: 576px)
+          content: none
       &>.image
         width: 640px
         height: auto
         @media (max-width: 950px)
           width: 450px
+        @media (max-width: 767px)
+          display: none
       .list
         position: absolute
         width: 100%
         height: 100%
+        @media (max-width: 576px)
+          position: static
+          display: grid
+          grid-template-columns: 1fr 1fr
+          grid-auto-rows: 1fr
+          grid-column-gap: 10px
+          grid-row-gap: 60px
         &:after
           content: ''
           width: 0
@@ -64,6 +79,8 @@ section.about-us
           top: 100px
           left: 100px
           border-left: 3px dashed #FFB902
+          @media (max-width: 576px)
+            content: none
         &:before
           content: ''
           width: 0
@@ -72,6 +89,8 @@ section.about-us
           top: 100px
           right: 100px
           border-right: 3px dashed #FFB902
+          @media (max-width: 576px)
+            content: none
         .elem
           position: absolute
           width: 200px
@@ -84,6 +103,9 @@ section.about-us
           border-top: none
           border-radius: 0 6px 6px 6px
           box-sizing: border-box
+          @media (max-width: 576px)
+            position: relative
+            width: 100%
           &:before
             content: ""
             position: absolute
@@ -96,6 +118,8 @@ section.about-us
             border-radius: 15px 6px 0 0
             left: -5px
             top: -18px
+            @media (max-width: 576px)
+              width: calc(100% + 6px)
           p
             margin: 0
             font-size: 22px

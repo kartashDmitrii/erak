@@ -12,19 +12,18 @@
 <body>
     <header>
     <div class="container">
-        <div class="burger">
-        </div>
+        <div class="burger" data-popup="mobile-header"></div>
         <a href="/" class="logo">
             <img src="img/logo.svg" alt="">
         </a>
-        <div class="mobile">
+        <div class="mobile mobile-header">
             <div class="mobile-top">
                 <p>Меню</p>
                 <div class="close"></div>
             </div>
             <nav>
                 <ul>
-                    <li class="active has-child">
+                    <li class="has-child">
                         <a href="">Каталог</a>
                         <ul>
                             <li><a href="">Вилочные погрузчики Б/У</a></li>
@@ -44,7 +43,6 @@
                                     </li>
                                     <li><a href="">Штабелёры</a></li>
                                     <li><a href="">Электрические тележки</a></li>
-                                    <li><a href="">Гидравлические тележки </a></li>
                                 </ul>
                             </li>
                             <li><a href="">Аренда погрузчика</a></li>
@@ -65,7 +63,7 @@
         </div>
         <div class="user-menu">
             <a href="tel:+380447681376" class="phone">+38 (044) 7681376</a>
-            <p>заказать обратный звонок</p>
+            <p data-popup="form-popup">заказать обратный звонок</p>
         </div>
     </div>
 </header>
@@ -78,7 +76,7 @@
         <div class="content">
             <h1>Вилочные погрузчики Erak Logistic - лучшие на рынке Украины</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet.</p>
-            <button class="btn">Заказать</button>
+            <button class="btn" data-popup="form-popup">Заказать</button>
         </div>
     </div>
 </section>
@@ -699,6 +697,20 @@
         </div>
     </div>
 </footer>
+    <section class="wrapper">
+    <div class="form-popup">
+    <span class="title">Оставьте заявку</span>
+    <p>Оставьте свои данные и наш менеджер перезвонит вам в течение 12  часов</p>
+    <form action="">
+        <label><input type="text" name="name" placeholder="Имя"></label>
+        <label><input type="tel" name="phone" placeholder="Телефон"></label>
+        <label><input type="email" name="email" placeholder="E-mail"></label>
+        <label><textarea name="comment" placeholder="Ваш комментарий"></textarea></label>
+        <button class="btn" type="submit">Оставить заявку</button>
+    </form>
+    <div class="close"></div>
+</div>
+</section>
 <script src="js/lib.min.js"></script>
 <script src="js/main-min.js"></script>
 </body>

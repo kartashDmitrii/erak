@@ -1,6 +1,8 @@
 section.form
   margin-top: 107px
   background: #494444
+  @media (max-width: 480px)
+    margin-top: 25px
   .container
     display: flex
     justify-content: space-between
@@ -18,10 +20,14 @@ section.form
         flex-direction: column
         align-items: center
         width: 100%
+      @media (max-width: 480px)
+        margin-top: 40px
       .section-title
         font-weight: 500
         color: #ffffff
         margin-bottom: 62px
+        @media (max-width: 480px)
+          margin-bottom: 50px
       p
         font-weight: 700
         font-size: 153px
@@ -35,6 +41,8 @@ section.form
           margin-left: 0
           font-size: 91px
           line-height: 105px
+        @media (max-width: 480px)
+          display: none
     .form
       margin-top: -75px
       margin-bottom: -20px
@@ -55,6 +63,11 @@ section.form
         max-width: 610px
         width: 100%
         margin: 0 auto
+      @media (max-width: 480px)
+        padding: 0
+        background: transparent
+      @media (max-width: 480px)
+        min-height: auto
       &:before
         content: ''
         position: absolute
@@ -63,11 +76,15 @@ section.form
         width: 100%
         height: 20px
         background: linear-gradient(to bottom left, $main 50%, transparent 51%)
+        @media (max-width: 480px)
+          content: none
       form
         width: 100%
         display: flex
         flex-direction: column
         margin-bottom: 24px
+        @media (max-width: 480px)
+          margin-bottom: 10px
         label
           width: 100%
           display: flex
@@ -84,6 +101,8 @@ section.form
             color: #ffffff
             @media (max-width: 1365px)
               padding: 15px
+            @media (max-width: 480px)
+              margin-bottom: 10px
             &::placeholder
               color: #acacac
         input[type="submit"]
@@ -97,10 +116,15 @@ section.form
           line-height: 26px
           padding: 22px
           cursor: pointer
-          border: none
+          border: 1px solid $main
           outline: none
           color: $black
-          margin-bottom: 24px
+          transition: all .3s
+          &:hover
+            background-color: transparent
+            color: $white
+          @media (max-width: 480px)
+            margin-top: 10px
       a
         width: 100%
         padding: 20px
@@ -112,3 +136,9 @@ section.form
         color: #ffffff
         text-decoration: none
         text-align: center
+        transition: all .3s
+        @media (max-width: 480px)
+          margin-bottom: 50px
+        &:hover
+          background-color: $main
+          color: $black

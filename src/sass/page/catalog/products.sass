@@ -1,0 +1,65 @@
+section.products
+  display: flex
+  flex-direction: column
+  .top-block
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin-bottom: 50px
+    .search-field
+      display: flex
+      max-width: 170px
+      position: relative
+      input
+        width: 100%
+        border: solid $main
+        border-width: 0 0 1px
+        color: $black
+        font-size: 16px
+        line-height: 160%
+        outline: none
+        padding-right: 37px
+        box-sizing: border-box
+        &::placeholder
+          color: $inactive
+      a
+        text-decoration: none
+        content: ''
+        width: 37px
+        height: 37px
+        position: absolute
+        top: 0
+        right: 0
+        bottom: 0
+        margin: auto
+        background: url("../img/svg/search.svg") center center / 100% 100% no-repeat
+  .sort
+    display: flex
+    align-items: center
+    justify-content: flex-start
+    p
+      font-size: 24px
+      line-height: 170%
+      color: $black
+      margin: 0 35px 0 0
+    .custom-select
+      .select
+        position: relative
+        z-index: 5
+        .options
+          transition: all .3s
+          background: #ffffff
+          width: max-content
+          position: absolute
+          top: 100%
+          left: 0
+          overflow: hidden
+          max-height: 0
+          &.active
+            max-height: 155px
+  .product-grid
+    display: grid
+    grid-template-columns: repeat(4, 1fr)
+    grid-column-gap: 10px
+    grid-auto-rows: auto
+    grid-row-gap: 20px

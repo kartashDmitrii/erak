@@ -7,6 +7,9 @@ section.top-block
   padding-bottom: 280px
   @media (max-width: 1199px)
     padding-bottom: 140px
+  @media (max-width: 480px)
+    padding-top: 30px
+    padding-bottom: 50px
   &:before
     content: ''
     position: absolute
@@ -17,11 +20,16 @@ section.top-block
     background: linear-gradient( to top, $white 2%, transparent 300%)
   .container
     display: flex
+    @media (max-width: 767px)
+      flex-direction: column-reverse
     .image
       width: 50%
       padding-right: 20px
       position: relative
       box-sizing: border-box
+      @media (max-width: 767px)
+        width: 100%
+        margin-bottom: 70px
       img
         position: absolute
         width: 960px
@@ -37,8 +45,14 @@ section.top-block
           width: 610px
           bottom: -90px
           top: auto
+        @media (max-width: 767px)
+          position: static
+          width: 100%
+          height: auto
     .content
       width: 50%
+      @media (max-width: 767px)
+        width: 100%
       h1
         font-weight: 500
         font-size: 48px
@@ -48,9 +62,22 @@ section.top-block
         @media (max-width: 950px)
           font-size: 36px
           line-height: 42px
+        @media (max-width: 480px)
+          font-size: 26px
+          line-height: 31px
+          margin-bottom: 15px
       p
         font-weight: 300
         font-size: 22px
         line-height: 26px
         color: $black
         margin: 0 0 47px
+        @media (max-width: 480px)
+          font-size: 14px
+          line-height: 17px
+          margin-bottom: 15px
+      .btn
+        @media (max-width: 767px)
+          position: absolute
+          bottom: 0
+          left: 15px

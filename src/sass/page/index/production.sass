@@ -4,6 +4,8 @@ section.production
   margin-bottom: 180px
   @media (max-width: 1023px)
     margin-bottom: 90px
+  @media (max-width: 480px)
+    margin-bottom: 50px
   .section-title
     margin-bottom: 60px
   .category-grid
@@ -17,5 +19,10 @@ section.production
     @media (max-width: 960px)
       grid-template-columns: repeat(2,1fr)
       margin: 0 40px
+    @media (max-width: 767px)
+      grid-template-columns: 1fr
+      margin: 0 60px
+    @media (max-width: 576px)
+      margin: 0 30px
     .elem
       position: relative
