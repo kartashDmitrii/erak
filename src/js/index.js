@@ -1,4 +1,5 @@
 import popupFunc from "./components/popupFunc";
+import hideList from "./components/hideList";
 
 if (document.querySelector('section.rent .slider')){
     let slider = document.querySelector('section.rent .slider');
@@ -7,8 +8,7 @@ if (document.querySelector('section.rent .slider')){
         duration: 400,
         easing: 'ease-out',
         perPage: {
-            0: 1,
-            480: 2,
+            0: 2,
             768: 3,
             1200: 4
         },
@@ -60,6 +60,9 @@ if (document.querySelector('.custom-select')){
             customSelect = document.createElement('div');                                    //  Создаём новый селект
         customSelectField.querySelector('select').style.display = 'none';                    //  Скрываем старый
         customSelect.classList.add('select');
+        if (customSelectField.dataset.theme) {
+            customSelect.classList.add(customSelectField.dataset.theme);
+        }
         customSelectField.querySelector('select').addEventListener('change', function (event){
             console.log(event.target.value)
         });
@@ -115,3 +118,9 @@ if (document.querySelector('.custom-select')){
 }
 
 /*  tovar custom select    */
+
+if (document.querySelector('.aside .field')){
+    document.querySelectorAll('.aside .field').forEach( elem => {
+        new hideList(elem)
+    })
+}

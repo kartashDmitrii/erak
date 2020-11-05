@@ -1,0 +1,395 @@
+section.productions-filter
+  display: flex
+  flex-direction: column
+  margin-bottom: 42px
+  .top-block
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin-bottom: 30px
+    @media (max-width: 767px)
+      flex-direction: column
+      margin-bottom: 20px
+    .section-title
+      @media (max-width: 950px)
+        font-size: 36px
+        line-height: 42px
+      @media (max-width: 767px)
+        margin-bottom: 40px
+      @media (max-width: 480px)
+        font-size: 26px
+        line-height: 31px
+  .filter-list
+    margin-bottom: 40px
+    display: flex
+    align-items: flex-start
+    .reset
+      width: 160px
+      margin-right: 20px
+      a
+        font-size: 16px
+        line-height: 160%
+        color: $black
+        text-decoration: none
+        width: 160px
+        display: flex
+        align-items: center
+        justify-content: center
+        border: 1px solid #EE3900
+        box-sizing: border-box
+        border-radius: 10px
+        padding: 12px
+    .filters
+      width: calc(100% - 180px)
+      display: flex
+      flex-wrap: wrap
+      justify-content: flex-start
+      align-items: center
+      .filter
+        padding: 12px
+        font-size: 16px
+        line-height: 160%
+        display: flex
+        align-items: center
+        justify-content: center
+        border: 1px solid #FFB902
+        box-sizing: border-box
+        border-radius: 10px
+        margin-right: 20px
+        margin-bottom: 10px
+        p
+          margin: 0 12px 0
+        span
+          width: 10px
+          height: 10px
+          background: url("../img/svg/close-red.svg") center center / 100% 100% no-repeat
+          cursor: pointer
+        &:last-child
+          margin-right: 0
+  .content
+    display: flex
+    margin-bottom: 40px
+    .aside
+      width: 23.125%
+      box-sizing: border-box
+      display: flex
+      flex-direction: column
+      border-right: .5px solid #ececec
+      @media (max-width: 1023px)
+        width: 230px
+      @media (max-width: 767px)
+        position: fixed
+        width: 100vw
+        height: 100vh
+        top: 0
+        right: 100%
+        background: #ffffff
+        z-index: 10
+        overflow-y: scroll
+        border: none
+        transition: right .3s
+        &.active
+          right: 0
+      .filter-name
+        font-size: 24px
+        line-height: 170%
+        color: $black
+        padding-bottom: 22px
+        border-bottom: .5px solid #ececec
+        margin: 0 0 20px
+        position: relative
+        @media (max-width: 767px)
+          background-color: $header-color
+          color: $white
+          border-bottom: none
+          padding: 20px 50px 20px 15px
+          margin: 0
+        .close
+          position: absolute
+          top: 0
+          bottom: 0
+          right: 15px
+          margin: auto
+          width: 30px
+          height: 30px
+          background: url("../img/svg/close-white.svg") center center / 100% 100% no-repeat
+          cursor: pointer
+          z-index: 2
+      form
+        display: flex
+        flex-direction: column
+        padding: 20px 15px 20px 0
+        @media (max-width: 767px)
+          padding: 0
+        .filter
+          display: flex
+          flex-direction: column
+          padding: 3px 20px 0 20px
+          margin-bottom: 30px
+          border: 0.5px solid #878787
+          box-sizing: border-box
+          border-radius: 10px
+          @media (max-width: 767px)
+            padding: 20px 15px 10px 15px
+            margin-bottom: 0
+            border-radius: 0
+            border-width: 0 0 1px 0
+          .name
+            font-weight: 300
+            font-size: 24px
+            line-height: 170%
+            color: $black
+            margin: 0
+            padding-bottom: 3px
+            padding-right: 20px
+            position: relative
+            cursor: pointer
+            @media (max-width: 1365px)
+              font-size: 16px
+            @media (max-width: 767px)
+              font-size: 18px
+              padding-bottom: 10px
+            &:after
+              content: ''
+              position: absolute
+              top: 0
+              bottom: 0
+              right: 0
+              margin: auto
+              height: 10px
+              width: 5px
+              background: url("../img/svg/slider_arrow.svg") center center / 100% 100% no-repeat
+              transition: all .3s
+              transform: rotate(90deg)
+              @media (max-width: 767px)
+                right: 15px
+            &.active
+              &:after
+                transform: rotate(-90deg)
+              & + .filters
+                padding-top: 7px
+                padding-bottom: 10px
+          .filters
+            display: flex
+            flex-direction: column
+            height: 0
+            overflow: hidden
+            padding-bottom: 0
+            transition: all .3s
+            ul
+              padding: 0
+              margin: 0
+              list-style: none
+              display: flex
+              flex-direction: column
+              li
+                display: flex
+                position: relative
+                align-items: center
+                margin-bottom: 10px
+                &:last-child
+                  margin-bottom: 0
+                input
+                  width: 21px
+                  height: 21px
+                  margin-right: 20px
+                  opacity: 0
+                  user-select: none
+                  pointer-events: none
+                  cursor: pointer
+                  &:hover ~ label:before
+                    background: rgba(255, 185, 2, .3)
+                  &:checked ~ label
+                    font-weight: 400
+                    &:before
+                      background: $main
+                  &:checked ~ label:after
+                    content: ''
+                label
+                  font-weight: 300
+                  font-size: 18px
+                  line-height: 157%
+                  color: $black
+                  cursor: pointer
+                  @media (max-width: 1365px)
+                    font-size: 16px
+                  &:before
+                    content: ''
+                    position: absolute
+                    width: 21px
+                    height: 21px
+                    top: 0
+                    left: 0
+                    background: #ffffff
+                    border: 1px solid #FFB902
+                    box-sizing: border-box
+                    border-radius: 5px
+                  &:after
+                    content: none
+                    width: 9px
+                    height: 4px
+                    border: solid $black
+                    border-width: 0 0 1px 1px
+                    transform: rotate(-45deg)
+                    position: absolute
+                    top: 7px
+                    left: 6px
+                span
+                  margin-left: 5px
+                  font-weight: 300
+                  font-size: 18px
+                  line-height: 157%
+                  @media (max-width: 1365px)
+                    font-size: 16px
+        .price
+          display: flex
+          flex-direction: column
+          padding: 3px 20px 0 20px
+          margin-bottom: 30px
+          border: 0.5px solid #878787
+          box-sizing: border-box
+          border-radius: 10px
+          @media (max-width: 767px)
+            padding: 20px 15px 10px 15px
+            margin-bottom: 0
+            border-radius: 0
+            border-width: 0 0 1px 0
+          .block
+            display: flex
+            flex-direction: column
+            overflow: hidden
+            height: 0
+            transition: all .3s
+          .name
+            font-weight: 300
+            font-size: 24px
+            line-height: 170%
+            color: $black
+            padding-bottom: 3px
+            margin: 0
+            position: relative
+            @media (max-width: 1365px)
+              font-size: 18px
+            @media (max-width: 767px)
+              font-size: 18px
+              padding-bottom: 10px
+            &.active
+              &:after
+                transform: rotate(-90deg)
+            &.active + .block
+              padding-top: 7px
+              padding-bottom: 25px
+            &:after
+              content: ''
+              position: absolute
+              right: 0
+              top: 0
+              bottom: 0
+              margin: auto
+              height: 10px
+              width: 5px
+              background: url("../img/svg/slider_arrow.svg") center center / 100% 100% no-repeat
+              transition: all .3s
+              transform: rotate(90deg)
+              @media (max-width: 767px)
+                right: 15px
+          .range
+            display: flex
+            margin-bottom: 10px
+            align-items: center
+            span
+              margin: 0 10px
+              font-weight: 300
+              font-size: 18px
+              line-height: 157%
+              color: $black
+              width: 10px
+            input
+              border: 1px solid #FFB902
+              box-sizing: border-box
+              border-radius: 5px
+              width: calc(50% - 15px)
+              padding: 5px 10px
+              font-weight: 300
+              font-size: 18px
+              line-height: 157%
+              -moz-appearance: textfield
+              outline: none
+              &::-webkit-outer-spin-button,&::-webkit-inner-spin-button
+                -webkit-appearance: none
+                margin: 0
+              @media (max-width: 1365px)
+                font-size: 16px
+          input[type="submit"]
+            max-width: 165px
+            background: $main
+            border-radius: 5px
+            display: flex
+            align-items: center
+            justify-content: center
+            font-size: 18px
+            line-height: 157%
+            color: $black
+            padding: 5px
+            outline: none
+            border: none
+            cursor: pointer
+            @media (max-width: 1365px)
+              font-size: 16px
+    .grid
+      width: 76.875%
+      display: flex
+      flex-direction: column
+      @media (max-width: 940px)
+        width: calc(100% - 230px)
+      .sort
+        display: flex
+        align-items: center
+        padding-left: 60px
+        padding-bottom: 22px
+        border-bottom: .5px solid #ececec
+        &>p
+          font-size: 24px
+          line-height: 170%
+          margin: 0 10px 0 0
+          color: $black
+          @media (max-width: 940px)
+            font-size: 16px
+        .custom-select
+          .select
+            @media (max-width: 940px)
+              width: 220px
+      .product-grid
+        display: grid
+        grid-template-columns: repeat(3, 1fr)
+        grid-auto-rows: auto
+        grid-gap: 15px
+        padding: 20px 0 0 15px
+        @media (max-width: 940px)
+          grid-template-columns: 1fr 1fr
+  .pagination
+    align-self: flex-end
+    display: flex
+    align-items: flex-end
+    font-weight: 300
+    font-size: 26px
+    line-height: 170%
+    color: $black
+    @media (max-width: 767px)
+      font-size: 21px
+    @media (max-width: 480px)
+      justify-content: space-between
+      width: 100%
+      padding: 0 35px
+      margin-bottom: 10px
+      box-sizing: border-box
+      font-size: 17px
+    *
+      margin-right: 33px
+      @media (max-width: 767px)
+        margin-right: 25px
+    a
+      text-decoration: none
+      color: inherit
+      &.current
+        font-weight: 700

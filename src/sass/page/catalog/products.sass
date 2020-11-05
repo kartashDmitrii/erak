@@ -1,65 +1,105 @@
 section.products
   display: flex
   flex-direction: column
+  margin-bottom: 100px
   .top-block
     display: flex
     justify-content: space-between
     align-items: center
     margin-bottom: 50px
-    .search-field
-      display: flex
-      max-width: 170px
-      position: relative
-      input
-        width: 100%
-        border: solid $main
-        border-width: 0 0 1px
-        color: $black
-        font-size: 16px
-        line-height: 160%
-        outline: none
-        padding-right: 37px
-        box-sizing: border-box
-        &::placeholder
-          color: $inactive
-      a
-        text-decoration: none
-        content: ''
-        width: 37px
-        height: 37px
-        position: absolute
-        top: 0
-        right: 0
-        bottom: 0
-        margin: auto
-        background: url("../img/svg/search.svg") center center / 100% 100% no-repeat
+    @media (max-width: 767px)
+      flex-direction: column
+      margin-bottom: 20px
+    .section-title
+      @media (max-width: 950px)
+        font-size: 36px
+        line-height: 42px
+      @media (max-width: 767px)
+        margin-bottom: 40px
+      @media (max-width: 480px)
+        font-size: 26px
+        line-height: 31px
   .sort
     display: flex
     align-items: center
     justify-content: flex-start
+    margin-bottom: 40px
+    align-items: center
     p
       font-size: 24px
       line-height: 170%
       color: $black
       margin: 0 35px 0 0
-    .custom-select
-      .select
-        position: relative
-        z-index: 5
-        .options
-          transition: all .3s
-          background: #ffffff
-          width: max-content
-          position: absolute
-          top: 100%
-          left: 0
-          overflow: hidden
-          max-height: 0
-          &.active
-            max-height: 155px
+      @media (max-width: 576px)
+        margin-right: 20px
+      @media (max-width: 480px)
+        font-size: 14px
+        margin-right: 8px
   .product-grid
     display: grid
     grid-template-columns: repeat(4, 1fr)
     grid-column-gap: 10px
     grid-auto-rows: auto
     grid-row-gap: 20px
+    margin-bottom: 40px
+    @media (max-width: 1199px)
+      grid-template-columns: repeat(3, 1fr)
+    @media (max-width: 767px)
+      grid-template-columns: 1fr 1fr
+  .bottom-block
+    display: flex
+    align-items: center
+    justify-content: space-between
+    @media (max-width: 480px)
+      flex-direction: column-reverse
+    .link
+      font-size: 24px
+      line-height: 170%
+      text-decoration: underline
+      color: $black
+      padding-right: 40px
+      position: relative
+      @media (max-width: 767px)
+        font-size: 18px
+        padding-right: 30px
+      @media (max-width: 480px)
+        align-self: flex-start
+        font-size: 12px
+        line-height: 14px
+      &:after
+        content: ''
+        position: absolute
+        top: 0
+        right: 0
+        bottom: 0
+        margin: auto
+        width: 22px
+        height: 12px
+        background: url('../img/svg/arrow_right.svg') center center/100% 100% no-repeat
+      &:hover
+        text-decoration: none
+    .pagination
+      display: flex
+      align-items: flex-end
+      font-weight: 300
+      font-size: 26px
+      line-height: 170%
+      color: $black
+      @media (max-width: 767px)
+        font-size: 21px
+      @media (max-width: 480px)
+        justify-content: space-between
+        width: 100%
+        padding: 0 35px
+        margin-bottom: 10px
+        box-sizing: border-box
+        font-size: 17px
+      *
+        margin-right: 33px
+        @media (max-width: 767px)
+          margin-right: 25px
+      a
+        text-decoration: none
+        color: inherit
+        &.current
+          font-weight: 700

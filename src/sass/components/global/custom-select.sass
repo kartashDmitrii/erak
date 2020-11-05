@@ -1,0 +1,73 @@
+.custom-select
+  position: relative
+  height: 36px
+  @media (max-width: 480px)
+    height: 30px
+  .select
+    position: relative
+    z-index: 6
+    color: $black
+    width: 282px
+    display: flex
+    flex-direction: column
+    box-sizing: border-box
+    border: 1px solid #878787
+    border-radius: 10px
+    @media (max-width: 576px)
+      width: 235px
+    @media (max-width: 480px)
+      width: 170px
+    &.active
+      position: absolute
+      .selected
+        &:after
+          transform: rotate(90deg)
+    .selected
+      cursor: pointer
+      padding: 3px 20px
+      width: 100%
+      box-sizing: border-box
+      margin: 0
+      font-size: 18px
+      line-height: 170%
+      position: relative
+      @media (max-width: 576px)
+        padding: 3px 15px
+      @media (max-width: 480px)
+        font-size: 14px
+      &:after
+        content: ''
+        position: absolute
+        top: 0
+        bottom: 0
+        right: 25px
+        margin: auto
+        height: 10px
+        width: 5px
+        background: url("../img/svg/slider_arrow.svg") center center / 100% 100% no-repeat
+        transition: all .3s
+        @media (max-width: 576px)
+          right: 20px
+    .options
+      transition: all .3s
+      background: #ffffff
+      position: relative
+      top: 100%
+      left: 0
+      overflow: hidden
+      max-height: 0
+      width: 100%
+      box-sizing: border-box
+      border-radius: 0 0 10px 10px
+      &.active
+        max-height: 155px
+      .option
+        margin: 0
+        padding: 3px 20px
+        font-size: 18px
+        line-height: 170%
+        z-index: 6
+        @media (max-width: 576px)
+          padding: 3px 15px
+        @media (max-width: 480px)
+          font-size: 14px

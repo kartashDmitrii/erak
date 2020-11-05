@@ -1,0 +1,30 @@
+.search-field
+  display: flex
+  max-width: 170px
+  position: relative
+  @media (max-width: 767px)
+    max-width: none
+    width: 100%
+  input
+    width: 100%
+    border: solid $main
+    border-width: 0 0 1px
+    color: $black
+    font-size: 16px
+    line-height: 160%
+    outline: none
+    padding-right: 37px
+    box-sizing: border-box
+    &::placeholder
+      color: $inactive
+  a
+    text-decoration: none
+    content: ''
+    width: 37px
+    height: 37px
+    position: absolute
+    top: 0
+    right: 0
+    bottom: 0
+    margin: auto
+    background: url("../img/svg/search.svg") center center / 100% 100% no-repeat

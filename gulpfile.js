@@ -61,7 +61,7 @@ function scssCompile(){
         .pipe(browserSync.stream());
 }
 function scripts() {
-   return gulp.src('./src/js/*.js')
+   return gulp.src('./src/js/**/*.js')
    .pipe(babel())
    .pipe(webpack({
        output: {

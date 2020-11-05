@@ -20,9 +20,10 @@ section.production
       grid-template-columns: repeat(2,1fr)
       margin: 0 40px
     @media (max-width: 767px)
-      grid-template-columns: 1fr
-      margin: 0 60px
-    @media (max-width: 576px)
       margin: 0 30px
+    @media (max-width: 480px)
+      margin: 0
+      grid-column-gap: 15px
+      grid-row-gap: 30px
     .elem
       position: relative
