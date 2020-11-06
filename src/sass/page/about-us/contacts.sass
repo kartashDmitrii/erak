@@ -1,0 +1,26 @@
+section.contacts
+  display: flex
+  flex-direction: column
+  margin-bottom: 60px
+  .section-title
+    margin-bottom: 60px
+  .contacts-field
+    display: grid
+    grid-template-columns: repeat(4, 1fr)
+    grid-column-gap: 130px
+    .block
+      display: flex
+      flex-direction: column
+      .desc
+        font-weight: 500
+        font-size: 24px
+        line-height: 170%
+        color: $black
+        margin: 0 0 10px
+      .value
+        font-size: 20px
+        line-height: 157%
+        color: $black
+        margin: 0 0 5px
+        &:last-child
+          margin-bottom: 0
