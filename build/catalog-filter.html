@@ -100,7 +100,11 @@
         </div>
     </div>
     <div class="content">
-        <div class="aside">
+        <div class="mobile-buttons">
+            <button class="filter" data-popup="mobile-popup-filter">Фильтр</button>
+            <button class="sort" data-popup="mobile-popup-sort">Сортировать</button>
+        </div>
+        <div class="aside mobile-popup-filter">
             <p class="filter-name">Фильтр <span class="close"></span></p>
             <form>
                 <div class="filter field">
@@ -225,8 +229,9 @@
             </form>
         </div>
         <div class="grid">
-            <div class="sort">
+            <div class="sort mobile-popup-sort">
                 <p>Сортировать по:</p>
+                <span class="close"></span>
                 <div class="custom-select" data-theme="mobile">
                     <select name="sort">
                         <option value="normal">По умолчанию</option>

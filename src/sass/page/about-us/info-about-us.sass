@@ -10,6 +10,8 @@ section.info-about-us
       display: flex
       flex-direction: column
       width: 58%
+      @media (max-width: 1023px)
+        width: 100%
       .text-field
         display: flex
         flex-direction: column
@@ -31,9 +33,13 @@ section.info-about-us
     .image
       width: 42%
       position: relative
+      @media (max-width: 1023px)
+        display: none
       img
         position: absolute
         bottom: 0
         left: 0
         width: auto
         max-width: 867px
+        @media (max-width: 1365px)
+          max-width: 620px

@@ -3,6 +3,8 @@ section.features
   justify-content: space-between
   position: relative
   margin-bottom: 72px
+  @media (max-width: 959px)
+    flex-wrap: wrap
   &:after
     content: ''
     position: absolute
@@ -15,6 +17,27 @@ section.features
     width: calc(100% - 30px)
     border-bottom: 3px dashed $main
     z-index: -1
+    @media (max-width: 959px)
+      top: 110px
+      bottom: auto
+      width: calc(50%)
+    @media (max-width: 576px)
+      content: none
+  &:before
+    content: none
+    position: absolute
+    bottom: 50px
+    left: 15px
+    right: 15px
+    margin: auto
+    height: 0
+    width: calc(50%)
+    border-bottom: 3px dashed $main
+    z-index: -1
+    @media (max-width: 959px)
+      content: ''
+    @media (max-width: 576px)
+      content: none
   .elem
     position: relative
     width: 200px
@@ -29,9 +52,10 @@ section.features
     box-sizing: border-box
     background: $white
     margin-top: 60px
-    @media (max-width: 576px)
-      position: relative
-      width: 100%
+    @media (max-width: 959px)
+      margin-right: calc((50% - 200px) / 2)
+      margin-left: calc((50% - 200px) / 2)
+      margin-bottom: 30px
     &:before
       content: ""
       position: absolute
@@ -44,8 +68,6 @@ section.features
       border-radius: 15px 6px 0 0
       left: -5px
       top: -18px
-      @media (max-width: 576px)
-        width: calc(100% + 6px)
     p
       margin: 0
       font-size: 22px
@@ -61,6 +83,21 @@ section.features
     &:nth-child(2)
       bottom: 0
       left: 0
+      @media (max-width: 959px)
+        &:after
+          content: ''
+          position: absolute
+          top: 100%
+          left: 0
+          right: 0
+          margin: auto
+          height: calc(100% - 25px)
+          width: 0
+          border-left: 3px dashed $main
+          z-index: -1
+      @media (max-width: 576px)
+        &:after
+          content: none
     &:nth-child(3)
       bottom: 0
       right: 0

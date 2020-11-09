@@ -199,7 +199,7 @@ header
               display: flex
               flex-direction: column
               justify-content: flex-start
-              z-index: 5
+              z-index: 7
               background: #ffffff
               box-sizing: border-box
               padding: 10px 0 40px
@@ -243,7 +243,7 @@ header
                     content: ''
                     position: absolute
                     top: 0
-                    left: calc(100vw - 55px)
+                    right: 15px
                     user-select: none
                     pointer-events: none
                     bottom: 0
@@ -251,6 +251,9 @@ header
                     height: 20px
                     margin: auto
                     background: url("../img/svg/menu-arrow.svg") center center / 100% 100% no-repeat
+                    @media (max-width: 767px)
+                      right: auto
+                      left: calc(100vw - 55px)
                   &:hover
                     &>a
                       color: $main

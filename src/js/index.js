@@ -1,8 +1,24 @@
 import popupFunc from "./components/popupFunc";
 import hideList from "./components/hideList";
+import blockHorizontalScroll from "./components/blockHorizontalScroll";
+import smoothscroll from 'smoothscroll-polyfill';
+import tabs from "./components/tabs";
+smoothscroll.polyfill();
+function iOS() {
+    return [
+            'iPad Simulator',
+            'iPhone Simulator',
+            'iPod Simulator',
+            'iPad',
+            'iPhone',
+            'iPod'
+        ].includes(navigator.platform)
+        // iPad on iOS 13 detection
+        || (navigator.userAgent.includes("Mac") && "ontouchend" in document)
+}
 
-if (document.querySelector('section.rent .slider')){
-    let slider = document.querySelector('section.rent .slider');
+if (document.querySelector('[data-slider="custom"]')){
+    let slider = document.querySelector('[data-slider="custom"]');
     let siema = new Siema({
         selector: slider.querySelector('.wrapper'),
         duration: 400,
@@ -19,6 +35,7 @@ if (document.querySelector('section.rent .slider')){
         loop: false,
         rtl: false,
         onInit: function(){
+            setTimeout(() => {this.preventLinkClick('.slider a');}, 50);
             let dotCount = Math.ceil(this.selector.querySelectorAll('.slide').length / this.perPage);
             for (let i = 0; i < dotCount; i++){
                 let dot = document.createElement('button');
@@ -39,9 +56,7 @@ if (document.querySelector('section.rent .slider')){
     });
 }
 
-document.querySelectorAll('[data-popup]').forEach( elem => {
-    new popupFunc(elem, document.querySelector(`.${elem.dataset.popup}`));
-});
+
 
 document.querySelectorAll('header nav>ul li.has-child').forEach( elem => {
     elem.addEventListener('click', function (event) {
@@ -63,9 +78,9 @@ if (document.querySelector('.custom-select')){
         if (customSelectField.dataset.theme) {
             customSelect.classList.add(customSelectField.dataset.theme);
         }
-        customSelectField.querySelector('select').addEventListener('change', function (event){
-            console.log(event.target.value)
-        });
+        // customSelectField.querySelector('select').addEventListener('change', function (event){
+        //     console.log(event.target.value)
+        // });
         let hideOptions = function (event){                                                         // Функция для скрытия селекта при нажатии мимо цели
             if (!event.target.closest('.custom-select')) {
                 customSelect.classList.remove('active');
@@ -98,6 +113,9 @@ if (document.querySelector('.custom-select')){
         originalSelectOptions.forEach( (elem,index) => {                    // Создание кастомного опшена на основе оригинального
             let customOption = document.createElement('p');
             customOption.classList.add('option');
+            if (customSelect.classList.contains('mobile')){
+                customOption.classList.add('close');
+            }
             customOption.innerText = elem.innerText;
             customOptions.appendChild(customOption);
             if (elem.selected){
@@ -124,3 +142,42 @@ if (document.querySelector('.aside .field')){
         new hideList(elem)
     })
 }
+
+document.querySelectorAll('[data-popup]').forEach( elem => {
+    new popupFunc(elem, document.querySelector(`.${elem.dataset.popup}`));
+});
+
+if (document.querySelector('.blog-links')) {
+    setTimeout(() => new blockHorizontalScroll(document.querySelector('.blog-links')), 100);
+}
+
+if (document.querySelector('[data-href]')) {
+
+    function SmoothVerticalScrolling(e) {
+        let eTop;
+        if (iOS()){
+            eTop = e.offsetTop;
+        } else {
+            eTop = e.getBoundingClientRect().top;
+        }
+        console.log(eTop)
+        window.scrollTo({
+            top: eTop - 50,
+            behavior: "smooth"
+        })
+    }
+
+    document.querySelectorAll('[data-href]').forEach(link => {
+        link.addEventListener('click', () => {
+            SmoothVerticalScrolling(document.querySelector(`${link.dataset.href}`))
+        })
+    });
+}
+
+if (document.querySelector('section.product-tabs')){
+    new tabs(document.querySelectorAll('section.product-tabs .tab-links .btn'), document.querySelectorAll('section.product-tabs .tabs .tab'));
+}
+
+// document.querySelector('section.product-info .image-block .slider .video').addEventListener('click', function () {
+//     document.querySelector('.video-popup iframe').src = this.dataset.src;
+// });

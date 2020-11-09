@@ -4,6 +4,8 @@ section.grid-images
   grid-auto-rows: 1fr
   grid-gap: 10px
   margin-bottom: 50px
+  @media (max-width: 576px)
+    grid-template-columns: repeat(3, 1fr)
   .image
     position: relative
     width: 100%

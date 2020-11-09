@@ -48,6 +48,19 @@
         transition: all .3s
         @media (max-width: 576px)
           right: 20px
+    &.mobile
+      @media (max-width: 767px)
+        border: none
+        width: 100%
+        .selected
+          display: none
+        .options
+          max-height: none
+          overflow: visible
+          .option
+            padding: 20px 15px
+            border-bottom: 1px solid #c4c4c4
+            margin: 0
     .options
       transition: all .3s
       background: #ffffff

@@ -23,9 +23,16 @@ section.productions-filter
     margin-bottom: 40px
     display: flex
     align-items: flex-start
+    @media (max-width: 767px)
+      flex-direction: column
+      margin-bottom: 20px
     .reset
       width: 160px
       margin-right: 20px
+      @media (max-width: 767px)
+        width: auto
+        margin-right: 0
+        margin-bottom: 10px
       a
         font-size: 16px
         line-height: 160%
@@ -39,12 +46,19 @@ section.productions-filter
         box-sizing: border-box
         border-radius: 10px
         padding: 12px
+        @media (max-width: 576px)
+          font-size: 14px
+          width: auto
+          padding: 8px 15px
+          font-weight: 300
     .filters
       width: calc(100% - 180px)
       display: flex
       flex-wrap: wrap
       justify-content: flex-start
       align-items: center
+      @media (max-width: 767px)
+        width: 100%
       .filter
         padding: 12px
         font-size: 16px
@@ -57,8 +71,14 @@ section.productions-filter
         border-radius: 10px
         margin-right: 20px
         margin-bottom: 10px
+        @media (max-width: 576px)
+          padding: 8px 15px
+          font-size: 14px
+          font-weight: 300
         p
           margin: 0 12px 0
+          @media (max-width: 576px)
+            margin: 0 9px 0 0
         span
           width: 10px
           height: 10px
@@ -69,6 +89,8 @@ section.productions-filter
   .content
     display: flex
     margin-bottom: 40px
+    @media (max-width: 767px)
+      flex-direction: column
     .aside
       width: 23.125%
       box-sizing: border-box
@@ -342,12 +364,27 @@ section.productions-filter
       flex-direction: column
       @media (max-width: 940px)
         width: calc(100% - 230px)
+      @media (max-width: 767px)
+        width: 100%
       .sort
         display: flex
         align-items: center
         padding-left: 60px
         padding-bottom: 22px
         border-bottom: .5px solid #ececec
+        @media (max-width: 767px)
+          position: fixed
+          top: 0
+          left: 100%
+          width: 100vw
+          height: 100vh
+          background: #ffffff
+          flex-direction: column
+          z-index: 10
+          padding: 0
+          transition: left .3s
+          &.active
+            left: 0
         &>p
           font-size: 24px
           line-height: 170%
@@ -355,9 +392,31 @@ section.productions-filter
           color: $black
           @media (max-width: 940px)
             font-size: 16px
+          @media (max-width: 767px)
+            width: 100%
+            box-sizing: border-box
+            margin: 0
+            padding: 15px
+            background: $header-color
+            font-size: 18px
+            font-weight: 500
+            color: $white
+        &>.close
+          position: absolute
+          top: 15px
+          right: 15px
+          width: 30px
+          height: 30px
+          background: url("../img/svg/close-white.svg") center center / 100% 100% no-repeat
+          cursor: pointer
+          display: none
+          @media (max-width: 767px)
+            display: block
         .custom-select
+          @media (max-width: 767px)
+            width: 100%
           .select
-            @media (max-width: 940px)
+            @media (max-width: 940px) and (min-width: 768px)
               width: 220px
       .product-grid
         display: grid
@@ -367,5 +426,24 @@ section.productions-filter
         padding: 20px 0 0 15px
         @media (max-width: 940px)
           grid-template-columns: 1fr 1fr
+        @media (max-width: 767px)
+          padding: 0
+    .mobile-buttons
+      display: none
+      flex-wrap: wrap
+      margin-bottom: 10px
+      @media (max-width: 767px)
+        display: flex
+      button
+        width: 50%
+        border: 1px solid $inactive
+        background: transparent
+        box-sizing: border-box
+        outline: none
+        padding: 15px
+        font-weight: 300
+        font-size: 16px
+        line-height: 160%
+        color: $black
   .pagination
     align-self: flex-end

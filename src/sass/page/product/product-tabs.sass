@@ -1,0 +1,102 @@
+section.product-tabs
+  display: flex
+  flex-direction: column
+  margin-bottom: 60px
+  .tab-links
+    display: flex
+    margin-bottom: 50px
+    .btn
+      margin-right: 30px
+      background: transparent
+      border: solid #ffb902
+      transition: box-shadow .3s
+      //#ffbc0e
+      border-width: 0 1px 1px 1px
+      &:last-child
+        margin-right: 30px
+      &:hover
+        box-shadow: 4px 4px 4px rgba(0,0,0,.25)
+      &:before
+        content: none
+      &:after
+        content: ''
+        position: absolute
+        width: calc(100% + 2px)
+        height: 26px
+        border-left: 1px solid #ffb902
+        border-top: 1px solid #ffb902
+        border-bottom: 1px solid transparent
+        transform: rotate(5deg) skew(5deg,0deg)
+        border-radius: 15px 5px 0 0
+        left: -1.5px
+        top: -14px
+      &.active
+        background: $main
+        border: none
+        &:before
+          content: ''
+        &:after
+          content: none
+  .tabs
+    .characteristics
+      display: flex
+      flex-direction: column
+      .info
+        width: 100%
+        background: #F4F4F4
+        border-radius: 10px
+        padding: 12px 10px
+        font-size: 20px
+        line-height: 24px
+        color: $black
+        margin: 0 0 40px
+      .field
+        display: flex
+        flex-direction: column
+        max-width: 620px
+        width: 100%
+        .characteristic
+          display: flex
+          justify-content: space-between
+          font-size: 20px
+          line-height: 157%
+          color: $black
+          position: relative
+          &:after
+            content: ''
+            width: 100%
+            height: 0
+            position: absolute
+            bottom: 10px
+            margin: auto
+            border-top: 1px dashed $inactive
+            z-index: -1
+          p
+            margin: 0
+            background: $white
+          .value
+            font-weight: 300
+            padding-left: 10px
+          .name
+            padding-right: 10px
+    .desc
+      display: flex
+      flex-direction: column
+      *
+        margin: 0 0 10px
+        &:last-child
+          margin: 0
+      p
+        font-size: 16px
+        line-height: 170%
+        color: $black
+    display: flex
+    flex-direction: column
+    .tab
+      height: 0
+      opacity: 0
+      overflow: hidden
+      &.active
+        height: auto
+        opacity: 1
+        overflow: inherit

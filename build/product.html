@@ -1,17 +1,211 @@
-<section class="rent container">
-    <div class="top-block">
-        <span class="section-title">Аренда</span>
-        <a href="">Смотреть все</a>
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>erak logistic</title>
+    <link rel="stylesheet" href="css/lib.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header>
+    <div class="container">
+        <div class="burger" data-popup="mobile-header"></div>
+        <a href="/" class="logo">
+            <img src="img/logo.svg" alt="">
+        </a>
+        <div class="mobile mobile-header">
+            <div class="mobile-top">
+                <p>Меню</p>
+                <div class="close"></div>
+            </div>
+            <nav>
+                <ul>
+                    <li class="has-child">
+                        <a href="">Каталог</a>
+                        <ul>
+                            <li><a href="">Вилочные погрузчики Б/У</a></li>
+                            <li><a href="">Штабелёры Б/У</a></li>
+                            <li><a href="">Электрические тележки  Б/У </a></li>
+                            <li><a href="">Гидравлические тележки Б/У (рокла, рохля, рохла)</a></li>
+                            <li class="has-child">
+                                <a href="">Новая складская техника</a>
+                                <ul>
+                                    <li class="has-child">
+                                        <a href="">Вилочные погрузчики</a>
+                                        <ul>
+                                            <li><a href="">Электро</a></li>
+                                            <li><a href="">Дизель</a></li>
+                                            <li><a href="">Газ \ бензин </a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="">Штабелёры</a></li>
+                                    <li><a href="">Электрические тележки</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="">Аренда погрузчика</a></li>
+                            <li><a href="">Запчасти</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="">Блог</a></li>
+                    <li><a href="">О нас</a></li>
+                    <li><a href="">Аренда</a></li>
+                </ul>
+            </nav>
+            <div class="lang">
+                <ul>
+                    <li><a href="">UA</a></li>
+                    <li class="active"><a href="">RU</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="user-menu">
+            <a href="tel:+380447681376" class="phone">+38 (044) 7681376</a>
+            <p data-popup="form-popup">заказать обратный звонок</p>
+        </div>
     </div>
-    <ul class="rent-category">
-        <li><a href="#">Вилочные погрузчики Б/У </a></li>
-        <li class="active"><a href="#">Штабелёры Б/У </a></li>
-        <li><a href="#">Электрические тележки Б/У </a></li>
-        <li><a href="#">Гидравлические тележки Б/У (рокла, рохля, рохла)</a></li>
-        <li><a href="#">Новая складская техника</a></li>
-        <li><a href="#">Запчасти</a></li>
-        <li><a href="#">Запчасти</a></li>
+</header>
+<main>
+    <section class="breadcrumbs container">
+    <ul>
+        <li><a href="/">Главная</a></li>
+        <li><a href="/">Новая складская техника</a></li>
+        <li><a href="/">Штабелёры</a></li>
+        <li><span>Новая складская техника</span></li>
     </ul>
+</section>
+    <section class="product-info container">
+    <div class="image-block">
+        <div class="current">
+            <div class="image">
+                <img src="img/product-image.png" alt="#">
+            </div>
+        </div>
+        <div class="slider">
+            <div class="image">
+                <img src="img/product-image.png" alt="#">
+            </div>
+            <div class="image">
+                <img src="img/main-image.png" alt="#">
+            </div>
+            <div class="video" data-popup="video-popup" data-src="https://www.youtube.com/embed/tgbNymZ7vqY">
+                <img src="img/blog-image1.png" alt="#">
+            </div>
+        </div>
+    </div>
+    <div class="info">
+        <p class="prod-name">Ричтрак TOYOTA Reflex M</p>
+        <div class="position">
+            <div class="block ukraine active">
+                <span>На складе в Украине</span>
+            </div>
+            <div class="block abroad">
+                <span>На складе за границей</span>
+            </div>
+        </div>
+        <p class="price">15500 <span>грн</span></p>
+        <button class="btn" data-popup="form-popup">Оставить заявку</button>
+        <div class="characteristics">
+            <div class="top-block">
+                <p>Основные характеристики:</p>
+                <span data-href="#characteristics">Все характеристики</span>
+            </div>
+            <div class="characteristic">
+                <p class="name">Грузоподьемность </p>
+                <p class="value"> 2-3т</p>
+            </div>
+            <div class="characteristic">
+                <p class="name">Висота подьема </p>
+                <p class="value">13м</p>
+            </div>
+            <div class="characteristic">
+                <p class="name">Производитель</p>
+                <p class="value">Still</p>
+            </div>
+            <div class="characteristic">
+                <p class="name">Тип двигателя</p>
+                <p class="value">Электрический (АКБ 48B)</p>
+            </div>
+            <div class="characteristic">
+                <p class="name">Тип</p>
+                <p class="value">Ритчак</p>
+            </div>
+        </div>
+    </div>
+</section>
+    <section class="product-tabs container">
+    <div class="tab-links">
+        <button class="btn active">Характеристики</button>
+        <button class="btn">Описание</button>
+    </div>
+    <div class="tabs">
+        <div class="tab characteristics active" id="characteristics">
+            <p class="info">Характеристики Ричтрак TOYOTA Reflex M </p>
+            <div class="field">
+                <div class="characteristic">
+                    <p class="name">Грузоподьемность </p>
+                    <p class="value"> 2-3т</p>
+                </div>
+                <div class="characteristic">
+                    <p class="name">Висота подьема</p>
+                    <p class="value">13м</p>
+                </div>
+                <div class="characteristic">
+                    <p class="name">Производитель</p>
+                    <p class="value">Still</p>
+                </div>
+                <div class="characteristic">
+                    <p class="name">Тип двигателя</p>
+                    <p class="value"> 2-3т</p>
+                </div>
+                <div class="characteristic">
+                    <p class="name">Грузоподьемность</p>
+                    <p class="value">13м</p>
+                </div>
+                <div class="characteristic">
+                    <p class="name">Висота подьема</p>
+                    <p class="value">Still</p>
+                </div>
+                <div class="characteristic">
+                    <p class="name">Производитель</p>
+                    <p class="value">Электрический (АКБ 48B)</p>
+                </div>
+                <div class="characteristic">
+                    <p class="name">Тип двигателя</p>
+                    <p class="value">Ритчак</p>
+                </div>
+                <div class="characteristic">
+                    <p class="name">Тип</p>
+                    <p class="value">Ритчак</p>
+                </div>
+            </div>
+        </div>
+        <div class="tab desc">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias autem eius est quidem sint sunt
+                voluptatum. Adipisci asperiores error iste, iusto maxime nemo quae quos sapiente soluta totam!
+                Consectetur, labore sequi. Ad animi aut deleniti eaque earum eligendi eos error eum eveniet inventore
+                labore modi molestias necessitatibus nisi nobis nulla odio, optio pariatur porro ratione repellat
+                temporibus voluptas. A amet asperiores blanditiis, debitis delectus dolores ducimus facere id in
+                inventore, itaque minus molestias nemo provident sapiente tempora unde! Cumque, sed.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias autem eius est quidem sint sunt
+                voluptatum. Adipisci asperiores error iste, iusto maxime nemo quae quos sapiente soluta totam!
+                Consectetur, labore sequi. Ad animi aut deleniti eaque earum eligendi eos error eum eveniet inventore
+                labore modi molestias necessitatibus nisi nobis nulla odio, optio pariatur porro ratione repellat
+                temporibus voluptas. A amet asperiores blanditiis, debitis delectus dolores ducimus facere id in
+                inventore, itaque minus molestias nemo provident sapiente tempora unde! Cumque, sed.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias autem eius est quidem sint sunt
+                voluptatum. Adipisci asperiores error iste, iusto maxime nemo quae quos sapiente soluta totam!
+                Consectetur, labore sequi. Ad animi aut deleniti eaque earum eligendi eos error eum eveniet inventore
+                labore modi molestias necessitatibus nisi nobis nulla odio, optio pariatur porro ratione repellat
+                temporibus voluptas. A amet asperiores blanditiis, debitis delectus dolores ducimus facere id in
+                inventore, itaque minus molestias nemo provident sapiente tempora unde! Cumque, sed.</p>
+        </div>
+    </div>
+</section>
+    <section class="similar-products container">
+    <span class="section-title">Похожие товары</span>
     <div class="slider" data-slider="custom">
         <div class="wrapper">
             <div class="slide">
@@ -382,3 +576,74 @@
         </div>
     </div>
 </section>
+    <section class="form">
+    <div class="container">
+        <div class="text">
+            <span class="section-title">Остались воросы?</span>
+            <p>Question</p>
+        </div>
+        <div class="form">
+            <form action="">
+                <label><input type="text" name="name_surname" placeholder="Имя и фамилия"></label>
+                <label><input type="tel" name="phone" placeholder="Номер телефону"></label>
+                <label><input type="email" name="email" placeholder="E-mail"></label>
+                <input type="submit" value="Отправить">
+            </form>
+            <a href="">Заполнить полную форму</a>
+        </div>
+    </div>
+</section>
+</main>
+<footer>
+    <div class="container">
+        <div class="top">
+            <p class="address">
+                ул. Льва Толстого 114, Киев, Украина, 03139
+            </p>
+            <ul class="phones">
+                <li><a href="tel:+380665677932">+38 066 567 79 32</a></li>
+                <li><a href="tel:+380665677932">+38 066 567 79 32</a></li>
+                <li><a href="tel:+380665677932">+38 066 567 79 32</a></li>
+            </ul>
+            <ul class="links">
+                <li><a href="">Telegram</a></li>
+                <li><a href="">Viber</a></li>
+                <li><a href="">WhatsApp</a></li>
+            </ul>
+        </div>
+        <div class="bottom">
+            <p class="rights">2020 - все права защищены.</p>
+            <div class="dev">
+                <p>Разработано в</p>
+                <a href="https://space.site-ok.ua" target="_blank">
+                    <img src="img/svg/space.svg" alt="Создание сайтов от space.site-ok.ua">
+                </a>
+                <a href="https://site-ok.ua" target="_blank">
+                    <img src="img/svg/site-ok.svg" alt="Продвижение сайтов от site-ok.ua">
+                </a>
+            </div>
+        </div>
+    </div>
+</footer>
+<section class="wrapper">
+    <div class="form-popup">
+    <span class="title">Оставьте заявку</span>
+    <p>Оставьте свои данные и наш менеджер перезвонит вам в течение 12  часов</p>
+    <form action="">
+        <label><input type="text" name="name" placeholder="Имя"></label>
+        <label><input type="tel" name="phone" placeholder="Телефон"></label>
+        <label><input type="email" name="email" placeholder="E-mail"></label>
+        <label><textarea name="comment" placeholder="Ваш комментарий"></textarea></label>
+        <button class="btn" type="submit">Оставить заявку</button>
+    </form>
+    <div class="close"></div>
+</div>
+    <div class="video-popup">
+    <iframe></iframe>
+    <div class="close"></div>
+</div>
+</section>
+<script src="js/lib.min.js"></script>
+<script src="js/main-min.js"></script>
+</body>
+</html>
