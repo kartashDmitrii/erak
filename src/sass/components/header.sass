@@ -135,6 +135,18 @@ header
               flex-direction: column
               height: 82px
               transition: height .3s
+              &:not(.active):before
+                content: ''
+                position: absolute
+                top: 0
+                right: 15px
+                user-select: none
+                pointer-events: none
+                bottom: 0
+                width: 20px
+                height: 20px
+                margin: auto
+                background: url("../img/svg/menu-arrow.svg") center center / 100% 100% no-repeat
               &>a
                 width: max-content
               &.active

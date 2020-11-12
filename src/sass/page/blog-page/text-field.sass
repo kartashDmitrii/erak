@@ -1,16 +1,16 @@
 section.text-field
   display: flex
   flex-direction: column
+  .section-title
+    margin-bottom: 70px
+    @media (max-width: 576px)
+      margin-bottom: 40px
   .top-block
     display: flex
     flex-direction: column
     margin-bottom: 30px
     @media (max-width: 576px)
       margin-bottom: 8px
-    .section-title
-      margin-bottom: 40px
-      @media (max-width: 576px)
-        margin-bottom: 20px
     .info
       display: flex
       align-items: center
@@ -37,6 +37,24 @@ section.text-field
         margin-bottom: 50px
         @media (max-width: 576px)
           margin-bottom: 20px
+    .wp-align-left
+      float: left
+      margin: .5em 1em 1em 0
+      display: block
+      padding: 0
+      width: calc(50% - 1em)
+      @media (max-width: 767px)
+        width: 100%
+        margin: .5em 0 1em
+    .wp-align-right
+      float: right
+      margin: .5em 0 1em 1em
+      display: block
+      padding: 0
+      width: calc(50% - 1em)
+      @media (max-width: 767px)
+        width: 100%
+        margin: .5em 0 1em
     p
       font-weight: 300
       font-size: 16px

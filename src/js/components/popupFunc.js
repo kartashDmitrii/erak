@@ -17,13 +17,17 @@ export default class popupFunc {
         }
     }
     openPopup(event){
-        event.preventDefault();
-        this.popup.classList.add('active');
-        if (this.popup.parentNode.classList.contains('wrapper')) {
-            this.popup.parentNode.classList.add('active');
-        }
-        if (window.screen.width < 768) {
-            document.body.classList.add('hidden')
+        if(event.target.dataset.stopEvent === undefined) {
+            this.popup.classList.add('active');
+            if (this.popup.parentNode.classList.contains('wrapper')) {
+                this.popup.parentNode.classList.add('active');
+            }
+            if (window.screen.width < 768) {
+                document.body.classList.add('hidden')
+            }
+            this.popup.querySelectorAll('.btn').forEach( elem => {
+                elem.querySelector('span').style.borderRight = `${elem.offsetWidth}px solid transparent`
+            })
         }
     }
     closePopup(event){

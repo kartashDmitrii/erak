@@ -70,13 +70,21 @@ section.form
         min-height: auto
       &:before
         content: ''
+        opacity: 1
         position: absolute
-        top: 0
         left: 0
-        width: 100%
-        height: 20px
-        background: linear-gradient(to bottom left, $main 50%, transparent 51%)
-        @media (max-width: 480px)
+        top: 0
+        width: 0
+        height: 0
+        border-radius: 0 0 0 6px
+        border-top: 20px solid $main
+        border-left: 610px solid transparent
+        box-sizing: border-box
+        @media (max-width: 1365px)
+          border-left-width: 500px
+        @media (max-width: 1199px)
+          border-left-width: 400px
+        @media (max-width: 860px)
           content: none
       form
         width: 100%
